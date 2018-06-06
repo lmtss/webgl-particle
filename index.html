@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dark Hole</title>
+        <meta charset="utf-8">    
+        <style>
+            *{                    
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                overflow: hidden;
+            }
+        </style>               
+    </head>
+    <body>
+
+    </body>
+    <script src="gl/item.js"></script>
+    <script src="gl/webgl-utils.js"></script>
+    <script src="gl/webgl-debug.js"></script>
+    <script src="gl/cuon-utils.js"></script>
+    <script src="shader.js"></script>
+    <script src="dark.js"></script>
+    <script>
+        var anim = new DarkHole({
+            width : window.innerWidth,
+            height : window.innerHeight,
+            radius : window.innerHeight*0.32,
+            num : 60000
+        });
+        document.body.appendChild(anim.DOM());
+        anim.start();
+    </script>
+</html>
